@@ -36,4 +36,5 @@ build/
 .vscode/
 
 ### Mac OS ###
-.DS_Store
+.DS_Store*.jdk/
+src/main/java/co/edu/uniquindio/algoritmos/oracleJdk-27.jdk/
