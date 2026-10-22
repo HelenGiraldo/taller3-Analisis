@@ -5,7 +5,7 @@ import statistics
 import sys
 import time
 
-from algoritmo.MergeSort import ordenar
+from algoritmo.merge_sort import ordenar
 
 
 REPETICIONES = 5
