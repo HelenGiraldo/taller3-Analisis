@@ -1,5 +1,13 @@
-import os
 import sys
+import os
+import time
+import math
+from pathlib import Path
+
+RAIZ_PROYECTO = Path(__file__).resolve().parent.parent.parent
+CARPETA_PYTHON = RAIZ_PROYECTO / "python"
+
+sys.path.insert(0, str(CARPETA_PYTHON))
 
 from algoritmo.dual_pivot_quicksort import ordenar
 

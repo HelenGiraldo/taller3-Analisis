@@ -1,0 +1,49 @@
+algoritmo,lenguaje,escenario,n,rep1_ns,rep2_ns,rep3_ns,rep4_ns,rep5_ns,promedio_ns,desviacion_ns,estado,verificacion
+Búsqueda por Saltos,Java,claves_mixtas,1000,52.1,67.0,64.5,60.0,59.5,60.62,5.1,medido,OK
+Búsqueda por Saltos,Java,inicio,1000,3.8,3.9,3.8,3.8,3.8,3.82,0.04,medido,OK
+Búsqueda por Saltos,Java,centro,1000,42.2,38.4,38.3,38.4,38.3,39.12,1.54,medido,OK
+Búsqueda por Saltos,Java,final,1000,56.5,44.2,48.9,42.7,47.4,47.94,4.82,medido,OK
+Búsqueda por Saltos,Java,claves_mixtas,10000,92.5,99.2,98.9,91.3,95.8,95.54,3.22,medido,OK
+Búsqueda por Saltos,Java,inicio,10000,2.7,2.9,3.5,3.8,3.3,3.24,0.4,medido,OK
+Búsqueda por Saltos,Java,centro,10000,60.7,64.8,67.5,63.9,65.9,64.56,2.27,medido,OK
+Búsqueda por Saltos,Java,final,10000,147.6,128.2,134.1,116.3,128.6,130.96,10.15,medido,OK
+Búsqueda por Saltos,Java,claves_mixtas,100000,233.1,214.5,197.2,231.3,218.4,218.9,13.01,medido,OK
+Búsqueda por Saltos,Java,inicio,100000,1.5,1.5,1.5,1.9,2.2,1.72,0.29,medido,OK
+Búsqueda por Saltos,Java,centro,100000,167.8,181.7,176.9,178.3,183.9,177.72,5.54,medido,OK
+Búsqueda por Saltos,Java,final,100000,399.2,481.4,512.3,510.8,486.3,478.0,41.33,medido,OK
+Búsqueda por Saltos,Java,claves_mixtas,1000000,663.0,840.4,830.6,864.2,667.9,773.22,88.68,medido,OK
+Búsqueda por Saltos,Java,inicio,1000000,1.6,1.6,1.5,1.6,1.6,1.58,0.04,medido,OK
+Búsqueda por Saltos,Java,centro,1000000,460.0,452.9,468.2,475.9,502.2,471.84,17.03,medido,OK
+Búsqueda por Saltos,Java,final,1000000,1317.2,1296.5,1279.1,1280.5,1755.3,1385.72,185.3,medido,OK
+Búsqueda por Interpolación,Java,claves_mixtas,1000,61.5,63.0,49.2,47.1,45.8,53.32,7.39,medido,OK
+Búsqueda por Interpolación,Java,inicio,1000,6.8,7.7,7.5,7.2,7.2,7.28,0.31,medido,OK
+Búsqueda por Interpolación,Java,centro,1000,17.5,18.6,16.7,16.2,16.8,17.16,0.83,medido,OK
+Búsqueda por Interpolación,Java,final,1000,8.3,6.3,6.9,8.7,7.6,7.56,0.88,medido,OK
+Búsqueda por Interpolación,Java,claves_mixtas,10000,21.6,22.9,22.2,21.8,22.0,22.1,0.45,medido,OK
+Búsqueda por Interpolación,Java,inicio,10000,3.1,3.1,2.7,2.6,2.6,2.82,0.23,medido,OK
+Búsqueda por Interpolación,Java,centro,10000,16.9,36.9,20.3,17.4,17.3,21.76,7.67,medido,OK
+Búsqueda por Interpolación,Java,final,10000,4.4,4.7,4.8,4.8,3.9,4.52,0.34,medido,OK
+Búsqueda por Interpolación,Java,claves_mixtas,100000,17.0,22.0,22.3,29.1,22.8,22.64,3.85,medido,OK
+Búsqueda por Interpolación,Java,inicio,100000,3.9,31.6,4.4,3.8,4.2,9.58,11.01,medido,OK
+Búsqueda por Interpolación,Java,centro,100000,18.6,12.7,12.6,12.5,13.7,14.02,2.33,medido,OK
+Búsqueda por Interpolación,Java,final,100000,2.7,2.7,4.1,2.6,7.7,3.96,1.95,medido,OK
+Búsqueda por Interpolación,Java,claves_mixtas,1000000,24.8,59.8,133.6,99.6,45.0,72.56,39.14,medido,OK
+Búsqueda por Interpolación,Java,inicio,1000000,2.5,2.5,2.4,2.5,2.5,2.48,0.04,medido,OK
+Búsqueda por Interpolación,Java,centro,1000000,21.3,22.4,22.3,22.9,21.7,22.12,0.56,medido,OK
+Búsqueda por Interpolación,Java,final,1000000,2.9,2.9,4.0,2.8,2.8,3.08,0.46,medido,OK
+Búsqueda Exponencial,Java,claves_mixtas,1000,79.8,79.6,72.6,86.3,87.5,81.16,5.37,medido,OK
+Búsqueda Exponencial,Java,inicio,1000,3.7,3.9,3.8,3.7,4.0,3.82,0.12,medido,OK
+Búsqueda Exponencial,Java,centro,1000,60.3,48.1,49.8,43.7,45.4,49.46,5.82,medido,OK
+Búsqueda Exponencial,Java,final,1000,24.0,24.6,22.0,26.6,24.8,24.4,1.48,medido,OK
+Búsqueda Exponencial,Java,claves_mixtas,10000,90.8,86.2,110.8,87.1,85.4,92.06,9.55,medido,OK
+Búsqueda Exponencial,Java,inicio,10000,1.1,1.4,0.8,0.8,1.2,1.06,0.23,medido,OK
+Búsqueda Exponencial,Java,centro,10000,30.1,28.5,27.6,29.0,28.0,28.64,0.87,medido,OK
+Búsqueda Exponencial,Java,final,10000,21.8,22.1,21.6,21.6,21.5,21.72,0.21,medido,OK
+Búsqueda Exponencial,Java,claves_mixtas,100000,80.9,123.5,104.0,95.3,107.1,102.16,14.02,medido,OK
+Búsqueda Exponencial,Java,inicio,100000,0.7,0.8,0.7,0.7,0.6,0.7,0.06,medido,OK
+Búsqueda Exponencial,Java,centro,100000,23.7,29.8,29.4,29.3,31.6,28.76,2.66,medido,OK
+Búsqueda Exponencial,Java,final,100000,37.9,32.6,36.8,37.6,46.3,38.24,4.46,medido,OK
+Búsqueda Exponencial,Java,claves_mixtas,1000000,163.0,139.5,140.1,137.0,138.8,143.68,9.72,medido,OK
+Búsqueda Exponencial,Java,inicio,1000000,0.7,0.9,0.8,0.8,0.7,0.78,0.07,medido,OK
+Búsqueda Exponencial,Java,centro,1000000,39.1,38.8,37.0,38.8,37.0,38.14,0.94,medido,OK
+Búsqueda Exponencial,Java,final,1000000,47.3,66.0,64.2,63.0,54.3,58.96,7.09,medido,OK

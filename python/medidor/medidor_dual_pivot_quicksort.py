@@ -1,6 +1,13 @@
-import math
+import sys
 import os
 import time
+import math
+from pathlib import Path
+
+RAIZ_PROYECTO = Path(__file__).resolve().parent.parent.parent
+CARPETA_PYTHON = RAIZ_PROYECTO / "python"
+
+sys.path.insert(0, str(CARPETA_PYTHON))
 
 from algoritmo.dual_pivot_quicksort import ordenar
 
@@ -10,15 +17,13 @@ REPETICIONES = 5
 TAMANOS = [1_000, 10_000, 100_000, 1_000_000]
 VARIANTES = ["aleatorios", "ascendente", "descendente"]
 
-# Las rutas se calculan desde la ubicación de este archivo (carpeta python/),
-# así el programa funciona sin importar desde dónde se ejecute.
-CARPETA_PYTHON = os.path.dirname(os.path.abspath(__file__))
-RAIZ = os.path.dirname(CARPETA_PYTHON)
-CARPETA_DATOS = os.path.join(RAIZ, "datos", "ordenamiento")
-ARCHIVO_CSV = os.path.join(RAIZ, "resultados", "ordenamiento_python.csv")
+CARPETA_DATOS = RAIZ_PROYECTO / "datos" / "ordenamiento"
+ARCHIVO_CSV = RAIZ_PROYECTO / "resultados" / "ordenamiento_python.csv"
 
-ENCABEZADO = ("algoritmo,lenguaje,variante,n,rep1_ms,rep2_ms,rep3_ms,"
-              "rep4_ms,rep5_ms,promedio_ms,desviacion_ms,estado,verificacion")
+ENCABEZADO = (
+    "algoritmo,lenguaje,variante,n,rep1_ms,rep2_ms,rep3_ms,"
+    "rep4_ms,rep5_ms,promedio_ms,desviacion_ms,estado,verificacion"
+)
 
 
 def leer_archivo(ruta):
@@ -40,9 +45,11 @@ def calcular_promedio(valores):
 def calcular_desviacion(valores):
     promedio = calcular_promedio(valores)
     suma = 0.0
+
     for valor in valores:
         suma += (valor - promedio) ** 2
-    return math.sqrt(suma / len(valores))     # poblacional, igual que en Java
+
+    return math.sqrt(suma / len(valores))
 
 
 def redondear(valor):
@@ -50,26 +57,41 @@ def redondear(valor):
 
 
 def escribir_linea(linea):
-    es_nuevo = not os.path.exists(ARCHIVO_CSV)
-    with open(ARCHIVO_CSV, "a", encoding="utf-8") as archivo:
+    ARCHIVO_CSV.parent.mkdir(parents=True, exist_ok=True)
+    es_nuevo = not ARCHIVO_CSV.exists()
+
+    with open(ARCHIVO_CSV, "a", encoding="utf-8", newline="") as archivo:
         if es_nuevo:
             archivo.write(ENCABEZADO + "\n")
+
         archivo.write(linea + "\n")
 
 
 def guardar_resultado(variante, n, tiempos, promedio, desviacion, verificacion):
     reps = ",".join(str(t) for t in tiempos)
-    escribir_linea(f"{ALGORITMO},{LENGUAJE},{variante},{n},{reps},"
-                   f"{promedio},{desviacion},medido,{verificacion}")
+
+    escribir_linea(
+        f"{ALGORITMO},{LENGUAJE},{variante},{n},{reps},"
+        f"{promedio},{desviacion},medido,{verificacion}"
+    )
 
 
 def guardar_error(variante, n):
-    escribir_linea(f"{ALGORITMO},{LENGUAJE},{variante},{n},,,,,,,,ERROR_RECURSION,")
+    escribir_linea(
+        f"{ALGORITMO},{LENGUAJE},{variante},{n},"
+        f",,,,,,,ERROR_RECURSION,"
+    )
 
 
 def medir(variante, n):
-    # 1. Cargar los datos (no se mide)
-    original = leer_archivo(os.path.join(CARPETA_DATOS, f"{variante}_{n}.txt"))
+    ruta_datos = CARPETA_DATOS / f"{variante}_{n}.txt"
+
+    if not ruta_datos.exists():
+        print(f"\nERROR: no se encontró el archivo de datos:")
+        print(ruta_datos)
+        return
+
+    original = leer_archivo(ruta_datos)
 
     tiempos = []
     ordenado_correcto = True
@@ -78,18 +100,17 @@ def medir(variante, n):
     print(f"Tamaño: {n}")
 
     try:
-        # 2. Repeticiones (Python no usa JIT, por eso no hay calentamiento)
         for r in range(REPETICIONES):
-            copia = original[:]                    # copia nueva, no se mide
+            copia = original[:]
 
             inicio = time.perf_counter_ns()
             ordenar(copia)
             fin = time.perf_counter_ns()
 
-            tiempo = redondear((fin - inicio) / 1_000_000)   # ms
+            tiempo = redondear((fin - inicio) / 1_000_000)
             tiempos.append(tiempo)
 
-            if not esta_ordenado(copia):           # verificación fuera del tiempo
+            if not esta_ordenado(copia):
                 ordenado_correcto = False
 
             print(f"Repetición {r + 1}: {tiempo} ms")
@@ -102,7 +123,9 @@ def medir(variante, n):
         print(f"Desviación estándar: {desviacion} ms")
         print(f"Verificación: {verificacion}")
 
-        guardar_resultado(variante, n, tiempos, promedio, desviacion, verificacion)
+        guardar_resultado(
+            variante, n, tiempos, promedio, desviacion, verificacion
+        )
 
     except RecursionError:
         print("ERROR: se superó el límite de recursión de Python (RecursionError)")
@@ -110,7 +133,10 @@ def medir(variante, n):
 
 
 def main():
-    os.makedirs(os.path.dirname(ARCHIVO_CSV), exist_ok=True)
+    ARCHIVO_CSV.parent.mkdir(parents=True, exist_ok=True)
+
+    print(f"Carpeta de datos: {CARPETA_DATOS}")
+    print(f"Archivo de resultados: {ARCHIVO_CSV}")
 
     for n in TAMANOS:
         for variante in VARIANTES:

@@ -1,0 +1,49 @@
+algoritmo,lenguaje,escenario,n,rep1_ns,rep2_ns,rep3_ns,rep4_ns,rep5_ns,promedio_ns,desviacion_ns,estado,verificacion
+Búsqueda por Saltos,Python,claves_mixtas,1000,1571.3,1453.2,1471.6,1531.1,1520.5,1509.54,42.46,medido,OK
+Búsqueda por Saltos,Python,inicio,1000,165.3,163.4,172.8,162.3,160.5,164.86,4.26,medido,OK
+Búsqueda por Saltos,Python,centro,1000,1183.6,1176.1,1168.3,1140.2,1143.3,1162.3,17.49,medido,OK
+Búsqueda por Saltos,Python,final,1000,2011.7,2003.1,1998.2,1995.1,2074.8,2016.58,29.65,medido,OK
+Búsqueda por Saltos,Python,claves_mixtas,10000,4239.1,5095.7,6319.0,4195.8,4091.8,4788.28,845.62,medido,OK
+Búsqueda por Saltos,Python,inicio,10000,163.4,165.4,162.7,162.7,163.0,163.44,1.01,medido,OK
+Búsqueda por Saltos,Python,centro,10000,2727.8,2717.8,3137.2,3094.7,2971.3,2929.76,177.58,medido,OK
+Búsqueda por Saltos,Python,final,10000,8242.8,8407.2,8560.5,8319.6,8552.0,8416.42,125.49,medido,OK
+Búsqueda por Saltos,Python,claves_mixtas,100000,13410.7,15755.4,14680.4,14574.9,14298.9,14544.06,752.53,medido,OK
+Búsqueda por Saltos,Python,inicio,100000,180.6,167.9,167.9,169.3,384.8,214.1,85.48,medido,OK
+Búsqueda por Saltos,Python,centro,100000,13975.4,11861.9,12052.0,12072.9,11299.4,12252.32,905.74,medido,OK
+Búsqueda por Saltos,Python,final,100000,22346.5,22543.4,22321.3,21785.2,21182.0,22035.68,495.47,medido,OK
+Búsqueda por Saltos,Python,claves_mixtas,1000000,48208.5,44293.8,44810.5,43694.4,46530.0,45507.44,1648.46,medido,OK
+Búsqueda por Saltos,Python,inicio,1000000,174.4,172.4,171.6,172.9,174.3,173.12,1.09,medido,OK
+Búsqueda por Saltos,Python,centro,1000000,28588.1,27731.0,27988.8,27526.1,27303.9,27827.58,442.46,medido,OK
+Búsqueda por Saltos,Python,final,1000000,91611.6,90093.9,94736.7,88820.0,89133.1,90879.06,2159.75,medido,OK
+Búsqueda por Interpolación,Python,claves_mixtas,1000,585.1,586.4,571.5,572.2,577.7,578.58,6.25,medido,OK
+Búsqueda por Interpolación,Python,inicio,1000,176.6,180.2,186.3,176.7,174.7,178.9,4.1,medido,OK
+Búsqueda por Interpolación,Python,centro,1000,488.6,497.3,490.1,475.4,485.9,487.46,7.11,medido,OK
+Búsqueda por Interpolación,Python,final,1000,205.1,205.9,206.1,205.9,206.7,205.94,0.51,medido,OK
+Búsqueda por Interpolación,Python,claves_mixtas,10000,724.6,667.2,666.3,669.9,686.8,682.96,22.11,medido,OK
+Búsqueda por Interpolación,Python,inicio,10000,178.1,183.9,178.3,171.1,174.3,177.14,4.3,medido,OK
+Búsqueda por Interpolación,Python,centro,10000,752.2,717.6,736.2,707.6,726.1,727.94,15.37,medido,OK
+Búsqueda por Interpolación,Python,final,10000,202.8,213.3,221.7,209.5,207.5,210.96,6.35,medido,OK
+Búsqueda por Interpolación,Python,claves_mixtas,100000,1005.0,751.6,697.2,694.9,684.4,766.62,121.47,medido,OK
+Búsqueda por Interpolación,Python,inicio,100000,188.1,303.9,195.1,179.4,187.5,210.8,46.82,medido,OK
+Búsqueda por Interpolación,Python,centro,100000,508.7,499.7,504.6,551.0,515.8,515.96,18.3,medido,OK
+Búsqueda por Interpolación,Python,final,100000,202.9,208.5,207.3,211.0,212.0,208.34,3.2,medido,OK
+Búsqueda por Interpolación,Python,claves_mixtas,1000000,1347.2,1334.7,1028.8,847.3,908.0,1093.2,210.6,medido,OK
+Búsqueda por Interpolación,Python,inicio,1000000,213.0,189.8,198.2,196.7,190.7,197.68,8.33,medido,OK
+Búsqueda por Interpolación,Python,centro,1000000,973.3,927.7,958.4,932.4,938.9,946.14,17.14,medido,OK
+Búsqueda por Interpolación,Python,final,1000000,207.9,208.5,210.3,213.0,205.3,209.0,2.56,medido,OK
+Búsqueda Exponencial,Python,claves_mixtas,1000,958.5,1025.4,911.3,917.8,937.3,950.06,41.12,medido,OK
+Búsqueda Exponencial,Python,inicio,1000,62.1,60.6,62.0,60.4,62.8,61.58,0.93,medido,OK
+Búsqueda Exponencial,Python,centro,1000,880.6,969.2,906.2,882.7,795.6,886.86,55.75,medido,OK
+Búsqueda Exponencial,Python,final,1000,1140.9,1138.4,1048.8,1138.1,1106.6,1114.56,35.23,medido,OK
+Búsqueda Exponencial,Python,claves_mixtas,10000,1713.7,1492.2,1326.4,1455.6,1385.7,1474.72,132.44,medido,OK
+Búsqueda Exponencial,Python,inicio,10000,75.1,75.4,75.3,77.4,74.2,75.48,1.05,medido,OK
+Búsqueda Exponencial,Python,centro,10000,1360.5,1407.8,1483.1,1458.9,1610.2,1464.1,84.42,medido,OK
+Búsqueda Exponencial,Python,final,10000,1310.6,1323.6,1352.0,1339.3,1364.9,1338.08,19.39,medido,OK
+Búsqueda Exponencial,Python,claves_mixtas,100000,2116.9,1821.6,1780.3,1780.5,1766.6,1853.18,133.14,medido,OK
+Búsqueda Exponencial,Python,inicio,100000,63.8,109.6,59.7,59.7,59.9,70.54,19.59,medido,OK
+Búsqueda Exponencial,Python,centro,100000,1430.7,1554.2,1507.6,1447.4,1497.6,1487.5,44.25,medido,OK
+Búsqueda Exponencial,Python,final,100000,2521.7,2365.6,1799.8,1931.2,1780.7,2079.8,305.58,medido,OK
+Búsqueda Exponencial,Python,claves_mixtas,1000000,3477.6,3050.8,2541.5,2308.8,2316.0,2738.94,457.33,medido,OK
+Búsqueda Exponencial,Python,inicio,1000000,59.1,69.9,60.8,60.1,59.2,61.82,4.09,medido,OK
+Búsqueda Exponencial,Python,centro,1000000,1859.3,2047.9,1999.9,2013.2,1933.5,1970.76,66.95,medido,OK
+Búsqueda Exponencial,Python,final,1000000,2154.1,2137.4,2178.5,2065.1,2188.2,2144.66,43.62,medido,OK
